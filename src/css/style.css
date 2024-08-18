@@ -1,0 +1,31 @@
+.dinamic-gradient {
+  background: linear-gradient(-50deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  color: transparent;
+  background-size: 400% 400%;
+  background-clip: text;
+  animation: gradient 5s ease infinite;
+  -ms-text-overflow: clip;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.no-scrollbar {
+  overflow: auto; /* Memungkinkan konten digulir */
+  scrollbar-width: none; /* Menghilangkan scrollbar di Firefox */
+  -ms-overflow-style: none; /* Menghilangkan scrollbar di IE dan Edge */
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none; /* Menghilangkan scrollbar di Chrome, Safari, dan Opera */
+}
+
