@@ -15,7 +15,11 @@ import thumb03 from './images/thumb-3.png'
 import thumb04 from './images/thumb-4.png'
 import thumb05 from './images/thumb-5.png'
 import thumb06 from './images/thumb-6.png'
-
+import fintechJayadi from './images/portfolio/Fintech-JPay.png'
+import kopidiaOrderingApp from './images/portfolio/Kopidia-Ordering-App.png'
+import ukostProptech from './images/portfolio/UKost-Proptech-WebApp.png'
+import personalWebPortfolio from './images/portfolio/PersonalWebPortfolio.png'
+import roadwaveEcommerce from './images/portfolio/Roadwave-Ecommerce.png'
 
 // Icons
 import whatsapp from './images/icons/whatsapp.svg'
@@ -34,6 +38,7 @@ import tailwind from './images/icons/tailwind.svg'
 import figma from './images/icons/figma.svg'
 import git from './images/icons/git.svg'
 import mysql from './images/icons/mysql.svg'
+import topIcon from './images/icons/top-arrow.svg'
 
 const images = {
     // Images
@@ -53,6 +58,11 @@ const images = {
     thumb04,
     thumb05,
     thumb06,
+    fintechJayadi,
+    kopidiaOrderingApp,
+    ukostProptech,
+    personalWebPortfolio,
+    roadwaveEcommerce,
 
     // Icons
     whatsapp,
@@ -70,7 +80,8 @@ const images = {
     cPositif,
     figma,
     git,
-    mysql
+    mysql,
+    topIcon
 }
 
 export default images;

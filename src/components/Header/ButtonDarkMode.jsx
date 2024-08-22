@@ -11,7 +11,7 @@ const ButtonDarkMode = () => {
   return (
     <button
       onClick={toggleTheme}
-      className='rounded-full p-4 bg-white dark:bg-black group hover:bg-accentColor dark:hover:bg-accentColor shadow-md'
+      className='rounded-full p-4 bg-white dark:bg-black group hover:bg-accentColor dark:hover:bg-accentColor shadow-md transition-colors duration-200 ease-in-out'
     >
       {/* dark-icon */}
       <svg className='block dark:hidden text-[#44556C] group-hover:text-white' width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">

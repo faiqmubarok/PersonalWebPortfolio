@@ -20,7 +20,7 @@ const Navbar = () => {
             to={item.link}
             className={({ isActive }) => 
               `flex flex-col gap-1.5 px-5 py-4 rounded-lg justify-center items-center font-medium text-sm font-poppins group ${
-                isActive ? 'bg-accentColor dark:bg-accentColor text-white' : 'bg-lightPrimary dark:bg-[#1B1A17] text-black dark:text-darkSecondary hover:bg-accentColor dark:hover:bg-accentColor hover:text-white dark:hover:text-white'
+                isActive ? 'bg-accentColor dark:bg-accentColor text-white' : 'bg-lightPrimary dark:bg-[#1B1A17] text-black dark:text-darkSecondary hover:bg-accentColor dark:hover:bg-accentColor hover:text-white dark:hover:text-white transition-colors duration-200 ease-in-out'
               }`
             }
           >

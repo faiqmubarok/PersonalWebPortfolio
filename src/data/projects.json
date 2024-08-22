@@ -1,0 +1,64 @@
+[
+  {
+    "id": 1,
+    "name": "Personal Web Portfolio",
+    "type": "Website",
+    "client": "",
+    "tech": ["HTML", "Tailwind CSS", "Javascript", "ReactJs"],
+    "image": "personalWebPortfolio",
+    "link": "",
+    "paragraf": "This is a UI/UX Design project for personal."
+  },
+  {
+    "id": 2,
+    "name": "Personal Web Portfolio",
+    "type": "UI/UX Design",
+    "client": "",
+    "tech": ["Figma"],
+    "image": "fintechJayadi",
+    "link": "",
+    "paragraf": "This is a UI/UX Design project for personal."
+  },
+  {
+    "id": 3,
+    "name": "Proptech Web App",
+    "type": "Web App",
+    "client": "U Kost Indonesia",
+    "tech": ["HTML", "Tailwind CSS", "ReactJs", "Laravel", "MySQL"],
+    "image": "ukostProptech",
+    "link": "Under Construction",
+    "paragraf": "This is a UI/UX Design project for personal."
+  },
+  {
+    "id": 4,
+    "name": "Kopidia Ordering App",
+    "type": "UI/UX Design",
+    "client": "Karsadia Culture Space",
+    "tech": ["Figma"],
+    "image": "kopidiaOrderingApp",
+    "link": "https://www.figma.com/proto/W0OuuktClFfFnPoRK4Avcd/Untitled?page-id=0%3A1&node-id=1-5&viewport=1354%2C1657%2C0.33&t=2qqOLB1OqImiDBya-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=1%3A5",
+    "paragraf": "This is a UI/UX Design project for personal."
+  },
+  {
+    "id": 5,
+    "name": "JPay Fintech App",
+    "type": "UI/UX Design",
+    "client": "",
+    "tech": ["Figma"],
+    "image": "fintechJayadi",
+    "link": "https://www.figma.com/proto/mX6P8Ech0NhoHnxSQglhrI/JPay-Mobile-Payment?page-id=0%3A1&node-id=102-1645&viewport=158%2C426%2C0.17&t=oT6qYIUTZrnuHMKc-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=102%3A1645&show-proto-sidebar=1",
+    "paragraf": "This is a UI/UX Design project for personal."
+  },
+  {
+    "id": 6,
+    "name": "Roadwave E-Commerce",
+    "type": "Web App",
+    "client": "Roadwave Apparel",
+    "tech": ["HTML", "Tailwind CSS", "Laravel", "MySQL"],
+    "image": "roadwaveEcommerce",
+    "link": "https://www.figma.com/proto/mX6P8Ech0NhoHnxSQglhrI/JPay-Mobile-Payment?page-id=0%3A1&node-id=102-1645&viewport=158%2C426%2C0.17&t=oT6qYIUTZrnuHMKc-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=102%3A1645&show-proto-sidebar=1",
+    "paragraf": "This is a UI/UX Design project for personal."
+  }
+  
+]
+  

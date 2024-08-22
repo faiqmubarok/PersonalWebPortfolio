@@ -4,13 +4,13 @@ import About from "../pages/About";
 import Contact from "../pages/Contact";
 import Portfolio from "../pages/Portfolio/Portfolio";
 import Resume from "../pages/Resume/Resume";
-import Loader from '../common/Loader'
+import NotFound from "../pages/NotFound";
 
 const DefaultRouter = createBrowserRouter([
   {
     path: "/",
     element: <DefaultLayout />,
-    loading: <Loader />,
+    errorElement: <NotFound />,
     children: [
       { path: "/", element: <About /> },
       { path: "portfolio", element: <Portfolio /> },

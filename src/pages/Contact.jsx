@@ -102,7 +102,7 @@ const Contact = () => {
           <button 
           type="submit"
           disabled={loading}
-          className="text-white text-center w-full lg:w-fit bg-accentColor lg:bg-transparent lg:border lg:border-accentColor lg:text-accentColor lg:hover:bg-accentColor lg:hover:text-white  font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 ">
+          className="text-white text-center w-full lg:w-fit bg-accentColor lg:bg-transparent lg:border lg:border-accentColor lg:text-accentColor lg:hover:bg-accentColor lg:hover:text-white  font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 transition-colors duration-200 ease-in-out">
             {loading ? "Sending" : "Send"}
           </button>
           </div>

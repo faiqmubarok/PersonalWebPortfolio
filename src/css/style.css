@@ -19,6 +19,7 @@
   }
 }
 
+
 .no-scrollbar {
   overflow: auto; /* Memungkinkan konten digulir */
   scrollbar-width: none; /* Menghilangkan scrollbar di Firefox */

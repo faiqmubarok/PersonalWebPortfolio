@@ -7,7 +7,6 @@ import { IoLocation } from "react-icons/io5";
 import { LuCalendarDays } from "react-icons/lu";
 import { MdOutlineFileDownload } from "react-icons/md";
 
-
 const Profile = () => {
   const [text] = useTypewriter({
     words: ['Frontend Developer', 'UI/UX Designer'],
@@ -38,32 +37,36 @@ const Profile = () => {
         <div className="w-full lg:absolute -top-32 left-0 mb-4">
             <img className="w-[210px] h-[210px] mx-auto" src={images.photoProfile} alt="" />
         </div>
-        {/* Photo Profil */}
-        
+        {/* Bio */}
         <div className="flex flex-col lg:pt-16 gap-7 items-center">
-          {/* Personal */}
+          {/* Text Profil */}
           <div className="w-full flex flex-col items-center gap-5">
             <h2 className="text-3xl font-roboto-slab font-semibold text-black dark:text-white w-full text-center">Muhammad Faiq Mubarok</h2>
-              <h4 className="text-lg font-medium font-poppins px-5 py-1 text-black dark:text-white bg-lightPrimary dark:bg-darkPrimary rounded-md">
-                <span>{text}</span>
-                <Cursor 
-                  cursorBlinking="false"
-                  cursorStyle="|"
-                  cursorColor="#1A73E3"
-                />
-              </h4>
-              <ul className="flex gap-3 w-full justify-center">
-                {socialMedia.map((platform) => (
-                  <li key={platform.name}>
-                    <a href={platform.url} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center p-2.5 bg-lightPrimary dark:bg-darkPrimary hover:bg-accentColor dark:hover:bg-accentColor rounded-md group">
-                      {platform.icon}
-                    </a>
-                  </li>
-                ))}
-              </ul>
+            <h4 className="text-lg font-medium font-poppins px-5 py-1 text-black dark:text-white bg-lightPrimary dark:bg-darkPrimary rounded-md">
+              <span>{text}</span>
+              <Cursor 
+                cursorBlinking="false"
+                cursorStyle="|"
+                cursorColor="#1A73E3"
+              />
+            </h4>
+            {/* Social Media */}
+            <ul className="flex gap-3 w-full justify-center">
+              {socialMedia.map((item) => (
+                <li key={item.name}>
+                  <a
+                    href={item.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center p-2.5 bg-lightPrimary dark:bg-darkPrimary hover:bg-accentColor dark:hover:bg-accentColor rounded-md group transition-colors duration-200 ease-in-out"
+                  >
+                    {item.icon}
+                  </a>
+                </li>
+              ))}
+            </ul>
+
           </div>
-          {/* Personal */}
-          
           {/* Info */}
           <ul className="w-full bg-lightPrimary dark:bg-darkPrimary rounded-lg px-2.5 py-7 flex flex-col gap-2.5">
             {info.map((info, index) => (
@@ -83,8 +86,6 @@ const Profile = () => {
               </li>
             ))}
           </ul>
-          {/* Info */}
-
           {/* Button Cv */}
           <div className="w-full flex justify-center items-center">
             <a 
@@ -95,7 +96,6 @@ const Profile = () => {
               <span className="text-lg font-medium  font-poppins">Download CV</span>
             </a>
           </div>
-          {/* Button Cv */}
         </div>
     </div>
     </>

@@ -4,27 +4,25 @@ import ButtonSidebar from './ButtonSidebar';
 import { NavLink } from 'react-router-dom';
 import '../../css/style.css';
 
-const Header = ({ setSidebarOpen }) => {
+const Header = ({ onSidebarOpen }) => {
   return (
     <div className="w-full flex justify-between items-center">
       {/* Logo */}
       <NavLink to="/" className='font-expletus-sans text-3xl font-extrabold shadow-sm underline text-start dinamic-gradient'>
         Faiqmubarok.
       </NavLink>
-      {/* Logo */}
 
       {/* Button Group */}
       <div className="flex gap-4">
         <ButtonDarkMode />
-        <ButtonSidebar setSidebarOpen={setSidebarOpen} />
+        <ButtonSidebar onSidebarOpen={onSidebarOpen} />
       </div>
-      {/* Button Group */}
     </div>
   );
 };
 
 Header.propTypes = {
-  setSidebarOpen: PropTypes.func.isRequired,
+  onSidebarOpen: PropTypes.func.isRequired,
 };
 
 export default Header;

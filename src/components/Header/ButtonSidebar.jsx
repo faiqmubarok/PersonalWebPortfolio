@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
 
-const ButtonSidebar = ({setSidebarOpen}) => {
+const ButtonSidebar = ({onSidebarOpen}) => {
   return (
-    <button onClick={() => setSidebarOpen(true)} className='rounded-full p-4 bg-accentColor shadow-md lg:hidden'>
+    <button onClick={() => onSidebarOpen()} className='rounded-full p-4 bg-accentColor shadow-md lg:hidden'>
       <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g clipPath="url(#clip0_283_586)">
         <path d="M1.04471 1.38952C0.775598 1.46241 0.702713 1.50726 0.416778 1.75395C-0.160698 2.26975 -0.132666 3.29575 0.467237 3.82838C0.926976 4.23205 0.102811 4.19841 10.0264 4.19841C19.9501 4.19841 19.1259 4.23205 19.5856 3.82838C20.2136 3.27333 20.2136 2.26414 19.5856 1.70909C19.1259 1.30542 19.9332 1.33906 10.1386 1.32785C3.14157 1.32224 1.25216 1.33345 1.04471 1.38952Z" fill="white"/>
@@ -14,14 +14,13 @@ const ButtonSidebar = ({setSidebarOpen}) => {
         <rect width="20" height="20" fill="white"/>
         </clipPath>
         </defs>
-    </svg>
-
+      </svg>
     </button>
   )
 }
 
 ButtonSidebar.propTypes = {
-  setSidebarOpen: PropTypes.func.isRequired,
+  onSidebarOpen: PropTypes.func.isRequired,
 }
 
 export default ButtonSidebar
