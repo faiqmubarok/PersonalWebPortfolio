@@ -1,20 +1,23 @@
 import { useState } from 'react';
-import Footer from '../../components/Footer/Footer'
-import projects from '../../data/projects.json'
-import images from '../../images';
+import Footer from '../components/Footer/Footer'
+import projects from '../data/projects.json'
+import images from '../images';
+import DrawerTop from '../components/DrawerTop/DrawerTop';
 
 const Portfolio = () => {
   const [selectedType, setSelectedType] = useState('All');
+  const [drawerTop, setDrawerTop] = useState(false);
+  const [selectedItem, setSelectedItem] = useState(null);
 
   const portfolio = [
     {type: 'All'},
-    {type: 'Website'},
+    {type: 'Web'},
     {type: 'UI/UX Design'},
   ]
 
   const filteredProjects = projects.filter((project) => {
     switch(selectedType) {
-      case 'Website':
+      case 'Web':
         return project.type === 'Website' || project.type === 'Web App';
       case 'UI/UX Design':
         return project.type === 'UI/UX Design';
@@ -23,6 +26,19 @@ const Portfolio = () => {
         return project;
     }
   })
+
+  function onOpenDrawerTop() {
+    setDrawerTop(true);
+  }
+
+  function onCloseDrawerTop() {
+    setDrawerTop(false);
+  }
+
+  const handleClickedPortfolio = (item) =>{
+    setSelectedItem(item);
+    onOpenDrawerTop();
+  }
 
   return (
     <>
@@ -54,6 +70,7 @@ const Portfolio = () => {
             key={project.id}
             >
               <button
+              onClick={() => handleClickedPortfolio(project)}
               className={`p-2 rounded-lg dark:bg-transparent group shadow-md outline outline-white dark:outline-[#353535]
                 ${ (index % 12 === 0 || index % 12 === 3 || index % 12 === 4 || index % 12 === 7 || index % 12 === 8)
                   ? 'bg-[#e4f7fa]/70' 
@@ -74,6 +91,7 @@ const Portfolio = () => {
             </li>
           ))}
         </ul>
+        <DrawerTop isOpen={drawerTop} onClose={onCloseDrawerTop} activePage='portfolio' portfolio={selectedItem}/>
       </div>
       <Footer isTrueDesign={ false }/>
     </main>

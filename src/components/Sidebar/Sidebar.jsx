@@ -32,8 +32,8 @@ const Sidebar = ({ sidebarOpen, onSidebarClose }) => {
 
   return (
     <>
-      <aside className={`fixed top-0 right-0 z-40 w-72 h-screen transition-transform duration-300 ease-in-out shadow-md ${sidebarOpen ? 'translate-x-0' : 'translate-x-full'}`}>
-        <div className="flex flex-col w-full h-full overflow-y-scroll bg-white dark:bg-black dark:bg-opacity-30 dark:backdrop-blur-lg px-3 py-9 md:px-6 gap-8 bg-opacity-30 backdrop-blur-lg">
+      <aside className={`fixed top-0 right-0 z-40 w-72 h-screen transition-transform duration-300 ease-in-out shadow-lg ${sidebarOpen ? 'translate-x-0' : 'translate-x-full'}`}>
+        <div className="flex flex-col w-full h-full overflow-y-scroll bg-white/10 dark:bg-black/10 backdrop-blur-md dark:backdrop-blur-md border border-white/20 dark:border-black/20 px-3 py-9 md:px-6 gap-8 ">
           {/* Logo & Close Button */}
           <div className="flex justify-between items-center">
             <NavLink 

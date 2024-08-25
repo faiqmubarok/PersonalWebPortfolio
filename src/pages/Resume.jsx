@@ -1,13 +1,13 @@
 import { useState } from "react"
-import images from "../../images"
-import '../../css/style.css'
+import images from "../images"
+import '../css/style.css'
 
-import Footer from "../../components/Footer/Footer"
-import DetailImage from "./DetailImage"
+import Footer from "../components/Footer/Footer"
+import DrawerTop from "../components/DrawerTop/DrawerTop"
 
 const Resume = () => {
-  const [active, setActive] = useState(false);
   const [selectedImage, setSelectedImage] = useState(null);
+  const [drawerTop, setDrawerTop] = useState(false);
 
   const education = [
     {year : '2022 - Now', school : 'Telkom University Purwokerto', major: 'Information System'},
@@ -16,6 +16,7 @@ const Resume = () => {
   ]
 
   const experience = [
+    {year: 'Bootcamp', company: 'Codepolitan', position: 'Fullstack Developer'},
     {year: 'March 2022 - June 2024', company: 'U Kost Indonesia', position: 'Frontend Developer'},
     {year: 'February 2024', company: 'Kopidia', position: 'UI/UX Designer'},
   ]
@@ -40,8 +41,16 @@ const Resume = () => {
 
   const handleThumbnailClick = (image) => {
     setSelectedImage(image);
-    setActive(true);
+    onOpenDrawerTop();
   };
+
+  function onOpenDrawerTop() {
+    setDrawerTop(true);
+  }
+
+  function onCloseDrawerTop() {
+    setDrawerTop(false);
+  }
 
   return (
     <>
@@ -150,14 +159,8 @@ const Resume = () => {
               </button>
             ))}
           </div>
-          {active && (
-          <DetailImage
-          image={selectedImage}
-          active={active}
-          onClose={() => setActive(false)}
-          />
-        )}
         </section>
+        <DrawerTop isOpen={drawerTop} onClose={onCloseDrawerTop} activePage='certificate' certificate={selectedImage}/>
       <Footer isTrueDesign={ false }/>
     </main>
     </>

@@ -7,7 +7,7 @@
     "tech": ["HTML", "Tailwind CSS", "Javascript", "ReactJs"],
     "image": "personalWebPortfolio",
     "link": "",
-    "paragraf": "This is a UI/UX Design project for personal."
+    "paragraphs": ["Personal Web Portfolio is a website project showcasing my portfolio as a UI/UX Designer and Front-end Developer. The site is designed and developed using technologies like HTML, Tailwind CSS, JavaScript, and ReactJS. Its purpose is to provide a clear overview of my skills, experience, and the work I have produced in web design and development. The website highlights key projects, shares my background, and offers an easy way to get in touch with me."]
   },
   {
     "id": 2,
@@ -15,19 +15,21 @@
     "type": "UI/UX Design",
     "client": "",
     "tech": ["Figma"],
-    "image": "fintechJayadi",
-    "link": "",
-    "paragraf": "This is a UI/UX Design project for personal."
+    "image": "personalWebPortofolioUi",
+    "link": "https://www.figma.com/proto/I8PTX9BpKQXqzRXuXJnLhw/Personal-Web-Portfolio?page-id=0%3A1&node-id=22-10&viewport=1014%2C237%2C0.28&t=lTjbgyn9RdDblm5K-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=22%3A10",
+    "paragraphs": ["Personal Web Portfolio is a UI/UX Design project that I created to showcase my personal portfolio professionally. The design was developed using Figma, with a focus on creating an intuitive, responsive, and aesthetically pleasing interface. The goal of this project was to deliver an optimal user experience while highlighting my skills in UI/UX design. In this portfolio, I visualized concepts and layouts that enable users to easily explore my work and learn more about me."]
   },
   {
     "id": 3,
     "name": "Proptech Web App",
     "type": "Web App",
     "client": "U Kost Indonesia",
-    "tech": ["HTML", "Tailwind CSS", "ReactJs", "Laravel", "MySQL"],
+    "tech": ["HTML", "Tailwind CSS", "Flowbite", "ReactJs", "Laravel", "MySQL"],
     "image": "ukostProptech",
-    "link": "Under Construction",
-    "paragraf": "This is a UI/UX Design project for personal."
+    "link": "",
+    "paragraphs": ["Proptech Web App is a web application developed for U Kost Indonesia aimed at simplifying the process of searching for and managing rental properties, such as boarding houses and rental homes. This app offers comprehensive search features, enabling users to find properties based on location, price, and desired amenities.",
+    "This project was a collaborative effort, with me taking the role of frontend developer. I utilized HTML, Tailwind CSS, Flowbite, and ReactJs to create an intuitive and responsive user interface, ensuring a seamless user experience across various devices. The backend of this application was built using Laravel and MySQL, ensuring efficient data handling and system functionality.",
+    "With this app, users can effortlessly explore a wide range of boarding houses and rental homes, view detailed property information, and make informed decisions before proceeding to the booking stage."]
   },
   {
     "id": 4,
@@ -37,7 +39,8 @@
     "tech": ["Figma"],
     "image": "kopidiaOrderingApp",
     "link": "https://www.figma.com/proto/W0OuuktClFfFnPoRK4Avcd/Untitled?page-id=0%3A1&node-id=1-5&viewport=1354%2C1657%2C0.33&t=2qqOLB1OqImiDBya-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=1%3A5",
-    "paragraf": "This is a UI/UX Design project for personal."
+    "paragraphs": ["Kopidia Ordering App is a UI/UX design project developed for Karsadia Culture Space, specifically for Kopidia, a coffee shop located in Purwokerto. This app is designed to streamline the ordering process for coffee and food at Kopidia, allowing customers to easily browse the menu, add items to their cart, and complete transactions.", 
+    "In this project, I used Figma to create a user-friendly interface. The design focuses on providing an efficient and intuitive ordering experience, ensuring that customers can enjoy Kopidia’s services with greater ease and speed."]
   },
   {
     "id": 5,
@@ -47,7 +50,8 @@
     "tech": ["Figma"],
     "image": "fintechJayadi",
     "link": "https://www.figma.com/proto/mX6P8Ech0NhoHnxSQglhrI/JPay-Mobile-Payment?page-id=0%3A1&node-id=102-1645&viewport=158%2C426%2C0.17&t=oT6qYIUTZrnuHMKc-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=102%3A1645&show-proto-sidebar=1",
-    "paragraf": "This is a UI/UX Design project for personal."
+    "paragraphs": ["JPay Fintech App is a UI/UX design project developed as the final assignment for the Introduction to Software Engineering course. This application is designed as a digital wallet platform, similar to popular fintech apps like LinkAja, DANA, and ShopeePay. The primary goal of this app is to provide users with a secure and convenient solution for managing their financial transactions digitally.", 
+    "In this project, I utilized Figma to create an intuitive and user-friendly interface. The design focuses on key features such as mobile payments, bill payments, and money transfers, ensuring a smooth and efficient user experience."]
   },
   {
     "id": 6,
@@ -56,9 +60,9 @@
     "client": "Roadwave Apparel",
     "tech": ["HTML", "Tailwind CSS", "Laravel", "MySQL"],
     "image": "roadwaveEcommerce",
-    "link": "https://www.figma.com/proto/mX6P8Ech0NhoHnxSQglhrI/JPay-Mobile-Payment?page-id=0%3A1&node-id=102-1645&viewport=158%2C426%2C0.17&t=oT6qYIUTZrnuHMKc-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=102%3A1645&show-proto-sidebar=1",
-    "paragraf": "This is a UI/UX Design project for personal."
+    "link": "",
+    "paragraphs": ["Roadwave E-Commerce is a web application developed for Roadwave Apparel, an apparel brand that sells its products online. This project was created as the final assignment for my Web Programming Design course, where I took on the role of frontend developer.", 
+    "My responsibility in this project was to design an attractive and responsive user interface, ensuring that customers can easily browse and purchase products across various devices. Using technologies such as HTML, Tailwind CSS, Laravel, and MySQL, this application was crafted to deliver a seamless and enjoyable online shopping experience for Roadwave Apparel’s customers."]
   }
-  
 ]
   

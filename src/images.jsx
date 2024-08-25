@@ -3,23 +3,24 @@ import backgroundLight from './images/background-light.png'
 import backgroundDark from './images/background-dark.png'
 import logo from './images/icons/logo.png'
 import photoProfile from './images/photoProfile.png'
-import certificate01 from './images/certificate-1.png'
-import certificate02 from './images/certificate-2.png'
-import certificate03 from './images/certificate-3.png'
-import certificate04 from './images/certificate-4.png'
-import certificate05 from './images/certificate-5.png'
-import certificate06 from './images/certificate-6.png'
-import thumb01 from './images/thumb-1.png'
-import thumb02 from './images/thumb-2.png'
-import thumb03 from './images/thumb-3.png'
-import thumb04 from './images/thumb-4.png'
-import thumb05 from './images/thumb-5.png'
-import thumb06 from './images/thumb-6.png'
+import certificate01 from './images/certificate/certificate-1.png'
+import certificate02 from './images/certificate/certificate-2.png'
+import certificate03 from './images/certificate/certificate-3.png'
+import certificate04 from './images/certificate/certificate-4.png'
+import certificate05 from './images/certificate/certificate-5.png'
+import certificate06 from './images/certificate/certificate-6.png'
+import thumb01 from './images/thumb-certificate/thumb-1.png'
+import thumb02 from './images/thumb-certificate/thumb-2.png'
+import thumb03 from './images/thumb-certificate/thumb-3.png'
+import thumb04 from './images/thumb-certificate/thumb-4.png'
+import thumb05 from './images/thumb-certificate/thumb-5.png'
+import thumb06 from './images/thumb-certificate/thumb-6.png'
 import fintechJayadi from './images/portfolio/Fintech-JPay.png'
 import kopidiaOrderingApp from './images/portfolio/Kopidia-Ordering-App.png'
 import ukostProptech from './images/portfolio/UKost-Proptech-WebApp.png'
 import personalWebPortfolio from './images/portfolio/PersonalWebPortfolio.png'
 import roadwaveEcommerce from './images/portfolio/Roadwave-Ecommerce.png'
+import personalWebPortofolioUi from './images/portfolio/personalPortoUI.png'
 
 // Icons
 import whatsapp from './images/icons/whatsapp.svg'
@@ -39,6 +40,10 @@ import figma from './images/icons/figma.svg'
 import git from './images/icons/git.svg'
 import mysql from './images/icons/mysql.svg'
 import topIcon from './images/icons/top-arrow.svg'
+import project from './images/icons/project.svg'
+import client from './images/icons/client.svg'
+import preview from './images/icons/preview.svg'
+import tech from './images/icons/tech.svg'
 
 const images = {
     // Images
@@ -63,6 +68,7 @@ const images = {
     ukostProptech,
     personalWebPortfolio,
     roadwaveEcommerce,
+    personalWebPortofolioUi,
 
     // Icons
     whatsapp,
@@ -81,7 +87,11 @@ const images = {
     figma,
     git,
     mysql,
-    topIcon
+    topIcon,
+    project,
+    client,
+    preview,
+    tech
 }
 
 export default images;

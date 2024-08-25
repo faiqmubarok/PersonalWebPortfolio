@@ -2,8 +2,8 @@ import { createBrowserRouter } from "react-router-dom";
 import DefaultLayout from '../layouts/DefaultLayouts'
 import About from "../pages/About";
 import Contact from "../pages/Contact";
-import Portfolio from "../pages/Portfolio/Portfolio";
-import Resume from "../pages/Resume/Resume";
+import Portfolio from "../pages/Portfolio";
+import Resume from "../pages/Resume";
 import NotFound from "../pages/NotFound";
 
 const DefaultRouter = createBrowserRouter([
