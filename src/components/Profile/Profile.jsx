@@ -89,7 +89,7 @@ const Profile = () => {
           {/* Button Cv */}
           <div className="w-full flex justify-center items-center">
             <a 
-            href="../../public/Muhammad_Faiq_Mubarok.pdf"
+            href="/Muhammad_Faiq_Mubarok.pdf"
             download='Muhammad_Faiq_Mubarok_CV.pdf'
             className="bg-accentColor flex rounded-md justify-center items-center py-3.5 px-7 gap-1 text-white">
               {<MdOutlineFileDownload className="w-6 h-6" />} 
