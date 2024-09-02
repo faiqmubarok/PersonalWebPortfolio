@@ -91,7 +91,7 @@ const Portfolio = () => {
             </li>
           ))}
         </ul>
-        <DrawerTop isOpen={drawerTop} onClose={onCloseDrawerTop} activePage='portfolio' portfolio={selectedItem}/>
+        <DrawerTop isOpen={drawerTop} onClose={onCloseDrawerTop} activePage='portfolio' portfolio={selectedItem} key={selectedItem?.id}/>
       </div>
       <Footer isTrueDesign={ false }/>
     </main>
