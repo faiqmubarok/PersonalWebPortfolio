@@ -21,6 +21,7 @@ import ukostProptech from './images/portfolio/UKost-Proptech-WebApp.png'
 import personalWebPortfolio from './images/portfolio/PersonalWebPortfolio.png'
 import roadwaveEcommerce from './images/portfolio/Roadwave-Ecommerce.png'
 import personalWebPortofolioUi from './images/portfolio/personalPortoUI.png'
+import movieProject from './images/portfolio/movieProject.png'
 
 // Icons
 import whatsapp from './images/icons/whatsapp.svg'
@@ -69,6 +70,7 @@ const images = {
     personalWebPortfolio,
     roadwaveEcommerce,
     personalWebPortofolioUi,
+    movieProject,
 
     // Icons
     whatsapp,

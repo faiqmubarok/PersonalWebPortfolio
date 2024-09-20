@@ -1,6 +1,19 @@
 [
   {
     "id": 1,
+    "name": "Movie App",
+    "type": "Web App",
+    "client": "Personal Project",
+    "tech": ["React", "Tailwind CSS", "TMDB API"],
+    "image": "movieProject",
+    "link": "https://nextflix-ecru.vercel.app/",
+    "paragraphs": [
+      "The Movie App is a front-end development project that showcases a variety of movies, allowing users to browse, search, and view detailed information about their favorite films. This app is powered by the TMDB API, providing up-to-date movie data.",
+      "I built this project using React for the front-end and Tailwind CSS for styling. The app is designed with a responsive layout, ensuring a seamless experience on both desktop and mobile devices. This project reflects my skills in integrating APIs and creating dynamic user interfaces."
+  ]
+  },
+  {
+    "id": 2,
     "name": "Personal Web Portfolio",
     "type": "Website",
     "client": "",
@@ -10,7 +23,7 @@
     "paragraphs": ["Personal Web Portfolio is a website project showcasing my portfolio as a UI/UX Designer and Front-end Developer. The site is designed and developed using technologies like HTML, Tailwind CSS, JavaScript, and ReactJS. Its purpose is to provide a clear overview of my skills, experience, and the work I have produced in web design and development. The website highlights key projects, shares my background, and offers an easy way to get in touch with me."]
   },
   {
-    "id": 2,
+    "id": 3,
     "name": "Personal Web Portfolio",
     "type": "UI/UX Design",
     "client": "",
@@ -20,7 +33,7 @@
     "paragraphs": ["Personal Web Portfolio is a UI/UX Design project that I created to showcase my personal portfolio professionally. The design was developed using Figma, with a focus on creating an intuitive, responsive, and aesthetically pleasing interface. The goal of this project was to deliver an optimal user experience while highlighting my skills in UI/UX design. In this portfolio, I visualized concepts and layouts that enable users to easily explore my work and learn more about me."]
   },
   {
-    "id": 3,
+    "id": 4,
     "name": "Proptech Web App",
     "type": "Web App",
     "client": "U Kost Indonesia",
@@ -32,7 +45,7 @@
     "With this app, users can effortlessly explore a wide range of boarding houses and rental homes, view detailed property information, and make informed decisions before proceeding to the booking stage."]
   },
   {
-    "id": 4,
+    "id": 5,
     "name": "Kopidia Ordering App",
     "type": "UI/UX Design",
     "client": "Karsadia Culture Space",
@@ -43,7 +56,7 @@
     "In this project, I used Figma to create a user-friendly interface. The design focuses on providing an efficient and intuitive ordering experience, ensuring that customers can enjoy Kopidia’s services with greater ease and speed."]
   },
   {
-    "id": 5,
+    "id": 6,
     "name": "JPay Fintech App",
     "type": "UI/UX Design",
     "client": "",
@@ -54,7 +67,7 @@
     "In this project, I utilized Figma to create an intuitive and user-friendly interface. The design focuses on key features such as mobile payments, bill payments, and money transfers, ensuring a smooth and efficient user experience."]
   },
   {
-    "id": 6,
+    "id": 7,
     "name": "Roadwave E-Commerce",
     "type": "Web App",
     "client": "Roadwave Apparel",
