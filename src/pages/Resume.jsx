@@ -16,6 +16,7 @@ const Resume = () => {
   ]
 
   const experience = [
+    {year: '6 Sept - Now', company: 'Studi Independent Financial Platform', position: 'PT Akselerasi Edukasi Internasional'},
     {year: 'Bootcamp', company: 'Codepolitan', position: 'Fullstack Developer'},
     {year: 'March 2022 - June 2024', company: 'U Kost Indonesia', position: 'Frontend Developer'},
     {year: 'February 2024', company: 'Kopidia', position: 'UI/UX Designer'},
