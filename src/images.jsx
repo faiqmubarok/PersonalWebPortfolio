@@ -22,6 +22,8 @@ import personalWebPortfolio from './images/portfolio/PersonalWebPortfolio.png'
 import roadwaveEcommerce from './images/portfolio/Roadwave-Ecommerce.png'
 import personalWebPortofolioUi from './images/portfolio/personalPortoUI.png'
 import movieProject from './images/portfolio/movieProject.png'
+import proptechAcademy from './images/portfolio/proptech_academy.png'
+import patani from './images/portfolio/patani.png'
 
 // Icons
 import whatsapp from './images/icons/whatsapp.svg'
@@ -45,6 +47,12 @@ import project from './images/icons/project.svg'
 import client from './images/icons/client.svg'
 import preview from './images/icons/preview.svg'
 import tech from './images/icons/tech.svg'
+import django from './images/icons/django.svg'
+import express from './images/icons/express.svg'
+import mongodb from './images/icons/mongodb.svg'
+import nodejs from './images/icons/nodejs.svg'
+import python from './images/icons/python.svg'
+import vscode from './images/icons/vscode.svg'
 
 const images = {
     // Images
@@ -71,6 +79,8 @@ const images = {
     roadwaveEcommerce,
     personalWebPortofolioUi,
     movieProject,
+    proptechAcademy,
+    patani,
 
     // Icons
     whatsapp,
@@ -93,7 +103,13 @@ const images = {
     project,
     client,
     preview,
-    tech
+    tech,
+    django,
+    express,
+    mongodb,
+    nodejs,
+    python,
+    vscode
 }
 
 export default images;

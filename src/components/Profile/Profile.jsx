@@ -9,7 +9,7 @@ import { MdOutlineFileDownload } from "react-icons/md";
 
 const Profile = () => {
   const [text] = useTypewriter({
-    words: ['Frontend Developer', 'UI/UX Designer'],
+    words: ['Fullstack Developer', 'UI/UX Designer'],
     loop: true,
     typeSpeed: 30,
     deleteSpeed: 20,

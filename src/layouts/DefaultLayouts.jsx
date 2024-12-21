@@ -47,7 +47,7 @@ const Layout = () => {
   return (
     <div
     ref={scrollableDivRef}
-      className={`w-screen h-screen bg-fixed bg-cover bg-right md:bg-center overflow-y-auto ${theme === 'light' ? 'bg-white' : 'bg-black'}`}
+      className={`w-screen h-screen bg-fixed bg-cover bg-right md:bg-center overflow-y-auto no-scrollbar ${theme === 'light' ? 'bg-white' : 'bg-black'}`}
       style={{
         backgroundImage: `url(${theme === 'light' ? images.backgroundLight : images.backgroundDark})`,
       }}

@@ -17,7 +17,7 @@ const DrawerTop = ({ isOpen, onClose, certificate, activePage, portfolio }) => {
         );
       case 'portfolio':
         return portfolio ? (
-          <div className="flex flex-col w-[90vw] lg:w-[50vw] max-h-[70vh] overflow-y-auto p-3 pb-4">
+          <div className="flex flex-col w-[90vw] lg:w-[50vw] max-h-[70vh] overflow-y-auto p-3 pb-4 no-scrollbar">
             <img
               className="rounded-lg w-full mb-9"
               src={images[portfolio.image]}
