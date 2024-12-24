@@ -11,42 +11,46 @@ const Resume = () => {
 
   const education = [
     {
-      year: "Jul - Nov 2024",
+      year: "Jul 2024 - Now",
       school: "Codepolitan",
       major: "Bootcamp Fullstack Developer",
     },
     {
-      year: "2022 - Now",
+      year: "Sep 2022 - Now",
       school: "Telkom University Purwokerto",
-      major: "Information System",
+      major: "Information Systems",
     },
-    { year: "2019 - 2022", school: "MA Husnul Khotimah", major: "Science" },
+    {
+      year: "Jul 2019 - May 2022",
+      school: "MA Husnul Khotimah",
+      major: "Science",
+    },
   ];
 
   const experience = [
     {
       year: "Sep - Dec 2024",
-      company: "Halofina",
+      company: "Halofina (MSIB)",
       position: "Fullstack Developer",
     },
     {
-      year: "March 2022 - June 2024",
+      year: "March 2024 - June 2024",
       company: "U Kost Indonesia",
       position: "Frontend Developer",
     },
-    { year: "February 2024", company: "Kopidia", position: "UI/UX Designer" },
+    { year: "Feb 2024", company: "Kopidia", position: "UI/UX Designer" },
   ];
 
   const organization = [
     {
-      name: "Dies Natalis Sistem Informasi 7",
+      name: "Anniversary Information System Study 7",
       position: "Person In Charge",
       period: "Sep 2023 - Dec 2023",
     },
     {
       name: "Information Systems Student Association",
       position: "Human Resource Developmen",
-      period: "2023 - 2024",
+      period: "Aug 2023 - Dec 2024",
     },
     {
       name: "Intern Information Systems Student Association",
@@ -56,12 +60,12 @@ const Resume = () => {
     {
       name: "Eksecutive Board GoodEnd Futsal",
       position: "Secretary",
-      period: "2021 - 2022",
+      period: "Jun 2021 - Apr 2022",
     },
     {
       name: "Association Of Santri From Karawang, Subang, Purwakarta",
       position: "Event Organizer",
-      period: "2022 - 2021",
+      period: "Jun 2021 - Apr 2022",
     },
     {
       name: "Romadhon Fun With Ankasa-HK",
