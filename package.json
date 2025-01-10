@@ -1,0 +1,38 @@
+{
+  "name": "web-profile",
+  "version": "1.0.0",
+  "description": "mern project mern project for web profile",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "server": "nodemon backend/server.js",
+    "client": "npm run dev --prefix frontend",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "mern",
+    "express",
+    "react",
+    "mongodb",
+    "nodejs"
+  ],
+  "author": "faiq",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "express-rate-limit": "^7.4.1",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.8.4",
+    "multer": "^1.4.5-lts.1",
+    "nodemailer": "^6.9.16"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.0",
+    "nodemon": "^3.1.7"
+  }
+}
