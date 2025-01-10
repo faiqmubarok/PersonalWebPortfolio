@@ -6,13 +6,12 @@ import {
   Button,
   CardFooter,
 } from "@material-tailwind/react";
-import Password from "../../components/Form/Password";
-import { useLocation } from "react-router-dom";
-import { useAlert } from "../../context/AlertContext";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { useFormik } from "formik";
 import * as Yup from "yup";
+import { useAlert } from "../../context/AlertContext";
 import { useResetPassword } from "../../api/auth";
+import Password from "../../components/Form/Password";
 
 const INITIAL_FORM = {
   password: "",

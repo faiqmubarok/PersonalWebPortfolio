@@ -62,6 +62,17 @@ export const refreshAccessToken = async () => {
   }
 };
 
+export const useLogout = ({ onSuccess, onError }) => {
+  return useMutation({
+    mutationFn: async () => {
+      const response = await axiosInstance.post("/api/auth/logout");
+      return response.data;
+    },
+    onSuccess,
+    onError,
+  });
+};
+
 export const logout = async () => {
   try {
     const response = await axiosInstance.post("/api/auth/logout");

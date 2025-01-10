@@ -1,12 +1,12 @@
 import { Button, Typography, Input } from "@material-tailwind/react";
 import images from "../../images";
+import { useFormik } from "formik";
 import { Link, useNavigate } from "react-router-dom";
 import { useAlert } from "../../context/AlertContext";
-import Password from "../../components/Form/Password";
-import axiosInstance from "../../api/axiosInstance";
 import { useAuth } from "../../context/AuthContext";
-import { useFormik } from "formik";
+import axiosInstance from "../../api/axiosInstance";
 import { useLogin } from "../../api/auth";
+import Password from "../../components/Form/Password";
 
 const Login = () => {
   const { showAlert } = useAlert();

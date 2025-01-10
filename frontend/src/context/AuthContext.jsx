@@ -1,6 +1,6 @@
 import { createContext, useContext, useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
-import propTypes from "prop-types";
+
+import PropTypes from "prop-types";
 
 const AuthContext = createContext();
 
@@ -8,7 +8,6 @@ const AuthContext = createContext();
 export const useAuth = () => useContext(AuthContext);
 
 export const AuthProvider = ({ children }) => {
-  const navigate = useNavigate();
   const [authState, setAuthState] = useState(() => {
     // Inisialisasi state dari sessionStorage
     const storedAuth = sessionStorage.getItem("auth");
@@ -26,7 +25,6 @@ export const AuthProvider = ({ children }) => {
   };
 
   const adminLoggedOut = () => {
-    navigate("/");
     sessionStorage.removeItem("auth");
     setAuthState({ isAuthenticated: false, user: "" });
   };
@@ -47,7 +45,7 @@ export const AuthProvider = ({ children }) => {
 };
 
 AuthProvider.propTypes = {
-  children: propTypes.node,
+  children: PropTypes.node,
 };
 
 export default AuthContext;

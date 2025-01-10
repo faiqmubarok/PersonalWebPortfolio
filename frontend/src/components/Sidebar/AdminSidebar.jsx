@@ -1,15 +1,14 @@
 import PropTypes from "prop-types";
-import { Link, NavLink } from "react-router-dom";
-import { Typography, IconButton, Button } from "@material-tailwind/react";
-import { IoReturnDownBackOutline } from "react-icons/io5";
-import ClickedOutside from "../ClickedOutside";
-import { RiShutDownLine } from "react-icons/ri";
 import { useState } from "react";
-import PopupSection from "../Modal/Modal";
-import { logout } from "../../api/auth";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import { useAlert } from "../../context/AlertContext";
 import { useAuth } from "../../context/AuthContext";
-import { IoHome } from "react-icons/io5";
+import { useLogout } from "../../api/auth";
+import { Typography, IconButton, Button } from "@material-tailwind/react";
+import ClickedOutside from "../ClickedOutside";
+import { RiShutDownLine } from "react-icons/ri";
+import Modal from "../Modal/Modal";
+import { IoReturnDownBackOutline, IoHome } from "react-icons/io5";
 import { GrContactInfo } from "react-icons/gr";
 import { GoProjectRoadmap } from "react-icons/go";
 import { BiTask } from "react-icons/bi";
@@ -45,19 +44,22 @@ const routes = [
 
 const AdminSidebar = ({ sidebarOpen, setSidebarOpen }) => {
   const [modalOpen, setModalOpen] = useState(false);
-  const { adminLoggedOut } = useAuth();
   const { showAlert } = useAlert();
+  const { adminLoggedOut } = useAuth();
+  const navigate = useNavigate();
 
-  const handleLogout = async () => {
-    try {
-      const response = await logout();
-      showAlert("success", response.message);
-      adminLoggedOut();
-    } catch (error) {
-      console.error("Logout failed:", error.response?.data || error.message);
-      showAlert("error", error?.response?.data?.message || error.message);
-    }
-  };
+  const { mutate } = useLogout({
+    onSuccess: async (data) => {
+      showAlert("success", data.message);
+      await navigate("/", { replace: true });
+      await adminLoggedOut();
+    },
+    onError: (error) => {
+      showAlert("error", error.response?.data?.message || "Terjadi kesalahan");
+      console.log(error);
+    },
+  });
+
   const handleOpen = () => setModalOpen(!modalOpen);
 
   return (
@@ -134,7 +136,7 @@ const AdminSidebar = ({ sidebarOpen, setSidebarOpen }) => {
           </div>
         </div>
       </ClickedOutside>
-      <PopupSection
+      <Modal
         headerText="Logout"
         open={modalOpen}
         handleOpen={handleOpen}
@@ -153,7 +155,7 @@ const AdminSidebar = ({ sidebarOpen, setSidebarOpen }) => {
               color="green"
               onClick={() => {
                 handleOpen();
-                handleLogout();
+                mutate();
               }}
               className="w-32"
             >
@@ -171,7 +173,7 @@ const AdminSidebar = ({ sidebarOpen, setSidebarOpen }) => {
             page.
           </p>
         </div>
-      </PopupSection>
+      </Modal>
     </>
   );
 };

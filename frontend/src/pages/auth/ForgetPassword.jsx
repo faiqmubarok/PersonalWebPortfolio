@@ -7,8 +7,8 @@ import {
 } from "@material-tailwind/react";
 import { useNavigate } from "react-router-dom";
 import { useAlert } from "../../context/AlertContext";
-import { IoIosArrowBack } from "react-icons/io";
 import { useFetchResetLink } from "../../api/auth";
+import { IoIosArrowBack } from "react-icons/io";
 
 const ForgotPassword = () => {
   const navigate = useNavigate();
