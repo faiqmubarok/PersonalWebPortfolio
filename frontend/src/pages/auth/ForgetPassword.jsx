@@ -1,4 +1,3 @@
-import { useState } from "react";
 import {
   Card,
   CardBody,
@@ -6,34 +5,31 @@ import {
   Button,
   Typography,
 } from "@material-tailwind/react";
-import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { useAlert } from "../../context/AlertContext";
 import { IoIosArrowBack } from "react-icons/io";
+import { useFetchResetLink } from "../../api/auth";
 
 const ForgotPassword = () => {
-  const [message, setMessage] = useState("");
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(false);
   const navigate = useNavigate();
   const { showAlert } = useAlert();
 
-  const sendResetLink = async () => {
-    setLoading(true);
-    try {
-      const response = await axios.get(
-        `${import.meta.env.VITE_BACKEND_URL}/api/auth/send-reset-password`
-      );
-      setMessage(response?.data.message);
-      showAlert("success", response?.data.message);
-    } catch (error) {
-      setMessage(error.response?.data?.message || "Terjadi kesalahan");
-      setError(true);
+  const {
+    mutate: sendResetLink,
+    isPending,
+    isError,
+    data,
+  } = useFetchResetLink({
+    onSuccess: (data) => {
+      showAlert("success", data.message);
+    },
+    onError: (error) => {
       showAlert("error", error.response?.data?.message || "Terjadi kesalahan");
-    } finally {
-      setLoading(false);
-    }
-  };
+      console.log(error);
+    },
+  });
+
+  const handleRequestReset = async () => sendResetLink();
 
   return (
     <div className="flex justify-center items-center min-h-screen bg-gray-100 relative">
@@ -58,17 +54,21 @@ const ForgotPassword = () => {
             Click the button below to send a password reset link to your email.
           </Typography>
           <Button
-            onClick={sendResetLink}
+            onClick={() => handleRequestReset()}
             size="lg"
             fullWidth
-            loading={loading}
+            loading={isPending}
             className="mb-4 ring-0 text-center flex items-center justify-center"
           >
             Send Reset Link
           </Button>
-          {message && (
-            <div className={`p-4 rounded-lg bg-green-500 bg-opacity-20 text-green-900 text-sm mt-4 ${error ? "bg-red-500 bg-opacity-20 text-red-900" : ""}`}>
-              {message}
+          {data?.message && (
+            <div
+              className={`p-4 rounded-lg bg-green-500 bg-opacity-20 text-green-900 text-sm mt-4 ${
+                isError ? "bg-red-500 bg-opacity-20 text-red-900" : ""
+              }`}
+            >
+              {data?.message}
             </div>
           )}
         </CardBody>

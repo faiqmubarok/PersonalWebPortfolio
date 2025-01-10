@@ -24,7 +24,6 @@ const sendEmail = async (to, subject, text) => {
 
     // Kirim email
     await transporter.sendMail(mailOptions);
-    console.log(`Email sent to ${to}`);
   } catch (error) {
     console.error("Error sending email:", error.message);
     throw new Error("Failed to send email");

@@ -21,7 +21,7 @@ router.post(
   refreshTokenLimiter,
   validateRefreshToken,
   refreshAccessToken
-);
+); 
 router.get("/send-reset-password", resetPasswordLimiter, sendPasswordResetLink);
 router.post("/reset-password", verifyResetPassword, resetPassword);
 router.post("/logout", logout);

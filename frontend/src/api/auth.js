@@ -28,6 +28,17 @@ export const useLogin = ({ onSuccess, onError }) => {
   });
 };
 
+export const useFetchResetLink = ({ onSuccess, onError }) => {
+  return useMutation({
+    mutationFn: async () => {
+      const response = await axios.get(`${API_URL}/send-reset-password`);
+      return response.data;
+    },
+    onSuccess,
+    onError,
+  });
+};
+
 export const refreshAccessToken = async () => {
   try {
     const response = await axiosInstance.post("/api/auth/refresh-token");
