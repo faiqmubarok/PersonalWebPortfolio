@@ -37,7 +37,7 @@ const Login = () => {
     },
     onError: (error) => {
       console.log(error);
-      showAlert("error", error.message);
+      showAlert("error", error.response?.data?.message || "Terjadi kesalahan");
     },
   });
 

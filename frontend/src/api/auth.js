@@ -4,19 +4,6 @@ import { useMutation } from "@tanstack/react-query";
 
 const API_URL = `${import.meta.env.VITE_BACKEND_URL}/api/auth`;
 
-// export const login = async (credentials) => {
-//   try {
-//     const response = await axios.post(
-//       `${import.meta.env.VITE_BACKEND_URL}/api/auth/login`,
-//       credentials
-//     );
-//     return response.data;
-//   } catch (error) {
-//     console.error("Login failed:", error.response?.data || error.message);
-//     throw error;
-//   }
-// };
-
 export const useLogin = ({ onSuccess, onError }) => {
   return useMutation({
     mutationFn: async (credentials) => {
@@ -32,6 +19,25 @@ export const useFetchResetLink = ({ onSuccess, onError }) => {
   return useMutation({
     mutationFn: async () => {
       const response = await axios.get(`${API_URL}/send-reset-password`);
+      return response.data;
+    },
+    onSuccess,
+    onError,
+  });
+};
+
+export const useResetPassword = ({ onSuccess, onError }) => {
+  return useMutation({
+    mutationFn: async ({ credentials, token }) => {
+      const response = await axios.post(
+        `${API_URL}/reset-password`,
+        credentials,
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        }
+      );
       return response.data;
     },
     onSuccess,

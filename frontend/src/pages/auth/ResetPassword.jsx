@@ -7,11 +7,26 @@ import {
   CardFooter,
 } from "@material-tailwind/react";
 import Password from "../../components/Form/Password";
-import { useState } from "react";
 import { useLocation } from "react-router-dom";
-import axios from "axios";
 import { useAlert } from "../../context/AlertContext";
 import { useNavigate } from "react-router-dom";
+import { useFormik } from "formik";
+import * as Yup from "yup";
+import { useResetPassword } from "../../api/auth";
+
+const INITIAL_FORM = {
+  password: "",
+  confirmPassword: "",
+};
+
+const validationSchema = Yup.object({
+  password: Yup.string()
+    .min(8, "Password harus memiliki minimal 8 karakter")
+    .required("Password wajib diisi"),
+  confirmPassword: Yup.string()
+    .oneOf([Yup.ref("password"), null], "Konfirmasi password tidak sesuai")
+    .required("Konfirmasi password wajib diisi"),
+});
 
 const ResetPassword = () => {
   const location = useLocation();
@@ -20,36 +35,29 @@ const ResetPassword = () => {
   const { showAlert } = useAlert();
   const navigate = useNavigate();
 
-  const [formPassword, setFormPassword] = useState({
-    password: "",
-    confirmPassword: "",
+  const formik = useFormik({
+    initialValues: INITIAL_FORM,
+    validationSchema,
+    onSubmit: async () => {
+      resetPassword({ credentials: formik.values, token });
+    },
+  });
+
+  const { mutate: resetPassword } = useResetPassword({
+    onSuccess: (data) => {
+      showAlert("success", data.message);
+      formik.resetForm();
+      navigate("/auth/sign-in");
+    },
+    onError: (error) => {
+      console.log(error);
+      showAlert("error", error.response?.data?.message || "Terjadi kesalahan");
+    },
   });
 
   const handleChange = (e) => {
-    setFormPassword({ ...formPassword, [e.target.name]: e.target.value });
-  };
-
-  const handleChangePassword = async (e) => {
-    e.preventDefault();
-    try {
-      const response = await axios.post(
-        `${import.meta.env.VITE_BACKEND_URL}/api/auth/reset-password`,
-        formPassword,
-        {
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
-        }
-      );
-      showAlert("success", response.data.message);
-      console.log(response.data);
-      if (response.status === 200) {
-        navigate("/auth/sign-in");
-      }
-    } catch (error) {
-      console.error("Login failed:", error.response?.data || error.message);
-      showAlert("error", error?.response?.data.message);
-    }
+    const { name, value } = e.target;
+    formik.setFieldValue(name, value);
   };
 
   return (
@@ -64,19 +72,21 @@ const ResetPassword = () => {
             Reset Password
           </Typography>
         </CardHeader>
-        <form onSubmit={handleChangePassword}>
+        <form onSubmit={formik.handleSubmit}>
           <CardBody className="flex flex-col gap-4">
             <Password
               name={"password"}
-              value={formPassword.password}
+              value={formik.values.password}
               handleChange={(e) => handleChange(e)}
               typography={"Password"}
+              error={formik.errors.password && formik.touched.password ? formik.errors.password : null}
             />
             <Password
               name={"confirmPassword"}
-              value={formPassword.confirmPassword}
+              value={formik.values.confirmPassword}
               handleChange={(e) => handleChange(e)}
               typography={"Confirm Password"}
+              error={formik.errors.confirmPassword && formik.touched.confirmPassword ? formik.errors.confirmPassword : null}
             />
           </CardBody>
           <CardFooter className="pt-0">
