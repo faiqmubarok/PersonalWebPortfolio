@@ -23,10 +23,10 @@ const PublicCertificates = ({
         src={`${import.meta.env.VITE_BACKEND_URL}/${certificate?.image}`}
         alt={`certificate - ${certificate?.name}`}
       />
-      <h6 className="font-medium text-sm mb-1 text-black dark:text-white">
+      <h6 className="font-medium text-sm mb-1 text-black dark:text-white line-clamp-1">
         {certificate?.name}
       </h6>
-      <p className="text-xs text-lightSecondary dark:text-darkSecondary">
+      <p className="text-xs text-lightSecondary dark:text-darkSecondary line-clamp-1">
         {certificate?.issuer} • {certificate?.year}
       </p>
     </button>

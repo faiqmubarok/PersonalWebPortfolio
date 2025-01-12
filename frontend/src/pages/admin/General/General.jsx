@@ -12,16 +12,27 @@ import {
 } from "@material-tailwind/react";
 import Skill from "./Skill";
 import SocialMedia from "./SocialMedia";
+import Contact from "./Contact";
 import { IoPencil } from "react-icons/io5";
 import { GrDocumentDownload } from "react-icons/gr";
+import { useFetchProfile } from "../../../api/profile";
+import { useAlert } from "../../../context/AlertContext";
 
 const General = () => {
   const { setBreadcrumbs, setCurrentTitle } = useBreadcrumb();
+  const { showAlert } = useAlert();
 
   useEffect(() => {
     setCurrentTitle("General Information");
     setBreadcrumbs([{ name: "General", path: "/general" }]);
   }, [setBreadcrumbs, setCurrentTitle]);
+
+  const { data, isLoading, refetch } = useFetchProfile({
+    onError: (error) => {
+      console.error(error);
+      showAlert("error", error.response?.data?.message || "Terjadi kesalahan");
+    },
+  });
 
   const aboutDesc = [
     "Hello, I'm Faiq, a fifth-semester Information Systems student at Telkom University Purwokerto. I focus on full-stack web development, with a passion for creating responsive and user-friendly applications. My primary expertise lies in the MERN stack, allowing me to build dynamic and efficient web solutions.",
@@ -105,14 +116,15 @@ const General = () => {
               </div>
             </div>
             <div className="lg:col-span-2">
-              <Typography variant="h6" color="blue-gray" className="mb-4">
-                Contact Info
-              </Typography>
-              <div className="flex flex-col gap-12"></div>
+              <Contact />
             </div>
             {/* Social Media */}
             <div className="lg:col-span-2">
-              <SocialMedia />
+              <SocialMedia
+                socialMediaData={data?.socialMedia}
+                isLoading={isLoading}
+                refetch={refetch}
+              />
             </div>
           </div>
           <Skill />
