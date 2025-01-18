@@ -29,6 +29,11 @@ const Resume = () => {
 
   const experience = [
     {
+      year: "Jan 2025 - Now",
+      company: "Minilemon Studio",
+      position: "Frontend Developer",
+    },
+    {
       year: "Sep - Dec 2024",
       company: "Halofina (MSIB)",
       position: "Fullstack Developer",
@@ -75,6 +80,20 @@ const Resume = () => {
   ];
 
   const certification = [
+    {
+      publisher: "PT Akselerasi Edukasi Internasional",
+      title: "Web Developer For Financial Banking Service",
+      year: "2024",
+      thumb: images.halofina,
+      image: images.halofina,
+    },
+    {
+      publisher: "Kampus Merdeka",
+      title: "Studi Independent",
+      year: "2024",
+      thumb: images.thumbMsib,
+      image: images.msib,
+    },
     {
       publisher: "Codepolitan",
       title: "Learn ReactJS",
@@ -281,10 +300,10 @@ const Resume = () => {
                   src={item.thumb}
                   alt={`certificate - ${index + 1}`}
                 />
-                <h6 className="font-medium text-sm mb-1 text-black dark:text-white">
+                <h6 className="font-medium text-sm mb-1 text-black dark:text-white line-clamp-1">
                   {item.title}
                 </h6>
-                <p className="text-xs text-lightSecondary dark:text-darkSecondary">
+                <p className="text-xs text-lightSecondary dark:text-darkSecondary line-clamp-1">
                   {item.publisher} • {item.year}
                 </p>
               </button>

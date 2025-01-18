@@ -6,7 +6,7 @@
     "client": "",
     "tech": ["ReactJs", "Tailwind CSS", "Django", "SQLite3", "REST API"],
     "image": "patani",
-    "link": "",
+    "link": "https://patani-mocha.vercel.app/",
     "paragraphs": [
       "PATANI is the final project in the independent study program at Halofina which I developed as an investment platform to connect investors with farmers. This project is designed to provide digital solutions to support the agricultural sector. The platform's interface features interactive charts that provide an informative and easy-to-understand investment experience.",
       "The project is built using technologies such as ReactJS, Tailwind CSS, Django, and SQLite3, with a REST API as a link between the front-end and back-end. I take full responsibility for major feature development, bug fixes, and thorough testing to ensure platform quality. PATANI reflects my dedication and ability in designing and implementing comprehensive web applications."

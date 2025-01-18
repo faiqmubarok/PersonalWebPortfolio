@@ -1,6 +1,6 @@
 import images from "../../images";
 import { Cursor, useTypewriter } from "react-simple-typewriter";
-import { FaWhatsapp, FaInstagram, FaLinkedin, FaGithub } from "react-icons/fa";
+import { FaDiscord, FaInstagram, FaLinkedin, FaGithub } from "react-icons/fa";
 import { SlScreenSmartphone } from "react-icons/sl";
 import { HiOutlineMailOpen } from "react-icons/hi";
 import { IoLocation } from "react-icons/io5";
@@ -20,9 +20,9 @@ const Profile = () => {
     {
       name: "whatsapp",
       icon: (
-        <FaWhatsapp className="text-[#25D366] w-6 h-6 group-hover:text-white" />
+        <FaDiscord className="text-[#7289da] w-6 h-6 group-hover:text-white" />
       ),
-      url: "https://api.whatsapp.com/send/?phone=6282117748606&text&type=phone_number&app_absent=0",
+      url: "https://discordapp.com/users/849823710684512287",
     },
     {
       name: "instagram",
@@ -67,10 +67,10 @@ const Profile = () => {
       value: "Purwokerto, Indonesia",
     },
     {
-      name: "birthday",
-      title: "Birthday",
+      name: "age",
+      title: "Age",
       icon: <LuCalendarDays className="text-[#4F1787] w-6 h-6" />,
-      value: "November 20, 2003",
+      value: "21 Years Old",
     },
   ];
 

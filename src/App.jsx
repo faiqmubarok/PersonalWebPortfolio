@@ -1,24 +1,13 @@
-import {RouterProvider} from 'react-router-dom'
-import Router from './router/DefaultRouter'
-import { ThemeProvider } from './context/ThemeContext';
-import { useState, useEffect } from 'react';
-import Loader from './common/Loader';
+import { RouterProvider } from "react-router-dom";
+import Router from "./router/DefaultRouter";
+import { ThemeProvider } from "./context/ThemeContext";
 
 function App() {
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {setTimeout(() => {setLoading(false)}, 1000)
-  }, [])
-
-  return loading ? 
-  <Loader /> : 
-  (
-    <>
+  return (
     <ThemeProvider>
-     <RouterProvider router={Router} />
+      <RouterProvider router={Router} />
     </ThemeProvider>
-    </>
-  )
+  );
 }
 
-export default App
+export default App;

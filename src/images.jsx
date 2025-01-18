@@ -53,6 +53,9 @@ import mongodb from './images/icons/mongodb.svg'
 import nodejs from './images/icons/nodejs.svg'
 import python from './images/icons/python.svg'
 import vscode from './images/icons/vscode.svg'
+import msib from './images/certificate/msib.png'
+import thumbMsib from './images/thumb-certificate/thumb-msib.png'
+import halofina from './images/certificate/halofina.png'
 
 const images = {
     // Images
@@ -81,6 +84,9 @@ const images = {
     movieProject,
     proptechAcademy,
     patani,
+    msib,
+    thumbMsib,
+    halofina,
 
     // Icons
     whatsapp,
