@@ -12,10 +12,12 @@ const About = () => {
   const techStack = [
     { name: "HTML", icon: images.html, level: "Intermediate" },
     { name: "CSS", icon: images.css, level: "Intermediate" },
-    { name: "Javascript", icon: images.javascript, level: "Intermediate" },
-    { name: "React", icon: images.react, level: "Beginner" },
-    { name: "Python", icon: images.python, level: "Beginner" },
     { name: "Tailwind", icon: images.tailwind, level: "Intermediate" },
+    { name: "Javascript", icon: images.javascript, level: "Intermediate" },
+    { name: "Typescript", icon: images.typescript, level: "Beginner" },
+    { name: "React", icon: images.react, level: "Intermediate" },
+    { name: "Next Js", icon: images.nextjs, level: "Beginner" },
+    { name: "Python", icon: images.python, level: "Beginner" },
     { name: "Node Js", icon: images.nodejs, level: "Beginner" },
     { name: "Express", icon: images.express, level: "Beginner" },
     { name: "Django", icon: images.django, level: "Beginner" },
@@ -57,17 +59,17 @@ const About = () => {
           <article className="text-justify leading-6 text-sm space-y-4 text-lightSecondary dark:text-darkSecondary font-normal">
             <p>
               Hello, I&apos;m Faiq, a fifth-semester Information Systems student
-              at Telkom University Purwokerto. I focus on full-stack web
-              development, with a passion for creating responsive and
-              user-friendly applications. My primary expertise lies in the MERN
-              stack, allowing me to build dynamic and efficient web solutions.
+              at Telkom University Purwokerto. With one year of experience as a
+              frontend developer, I specialize in building responsive and
+              user-friendly web applications using JavaScript and TypeScript.
             </p>
 
             <p>
-              As a student, I am committed to learning and applying the latest
-              technologies to deliver innovative solutions. My goal is to
-              contribute to exciting projects, further develop my skills, and
-              ultimately pursue a career as a proficient software developer.
+              While my primary focus is frontend development, I also have a
+              solid understanding of backend technologies, including Node.js and
+              Express.js, allowing me to work across the full stack when needed.
+              I&apos;m passionate about learning and applying the latest web
+              technologies to deliver high-quality and innovative solutions.
             </p>
 
             <p>

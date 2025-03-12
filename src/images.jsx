@@ -56,6 +56,8 @@ import vscode from './images/icons/vscode.svg'
 import msib from './images/certificate/msib.png'
 import thumbMsib from './images/thumb-certificate/thumb-msib.png'
 import halofina from './images/certificate/halofina.png'
+import nextjs from './images/icons/nextjs.svg'
+import typescript from './images/icons/typescript.svg'
 
 const images = {
     // Images
@@ -115,7 +117,9 @@ const images = {
     mongodb,
     nodejs,
     python,
-    vscode
+    vscode,
+    typescript,
+    nextjs
 }
 
 export default images;
